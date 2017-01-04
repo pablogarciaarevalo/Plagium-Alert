@@ -1,0 +1,160 @@
+<html>
+<body>
+<h1>
+Analysis mode
+</h1>
+
+<p>
+From the menu Configuration/Configure check, the software will give the possibility to change the analysis type.
+</p>
+
+<p>
+Configuration check let the user establish the following options:
+  <ul>
+    <li><u>Tyne search</u>: The software search in to Google using the first 20 words (if it had it) of each paragraph.</li>
+    <li><u>Normal search</u>: The software search in to Google from 20 to 20 words. </li>
+    <li><u>Exhaustive search</u>: The software search in to Google using 20 words from 5 to 5 words.</li>
+  </ul>
+Logically, as many searches in each paragraph would be done, the probability to make a correct analysis is higher. Anyway, It
+is not advisable make an exhaustive search, in case of  it was a small paragraph, because this action can produce the stop of the
+service to the public IP direction from Google servers. Google servers can understand this action as a hacking attack. The
+consequences of modify this options is user responsibility.
+</p>
+
+<p>
+The searches limit assure the availability of the system (to avoid Google servers cut the service) establishing just one search
+for the establish seconds number. Of course, this modification in the seconds number will cause that the analyze of the document
+takes long that if the software does not consider it, but the calc speed is not the object of the first version of the software.
+</p>
+
+<p><u>Examples</u>:</p>
+
+<p>
+A searches example that are made in Google servers and considering each configure check is established hereafter. Consider each
+block as a paragraph and each letter like 5 words, so the contain of the text should be 2 paragraph of 60 words each one.
+The words that are object of searches will be highlighted in <b>black</b>.
+</p>
+
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br>
+<ul>
+  <li>Tyne search: the software will make two searches</li><br>
+    <ul>
+      <li>1st search:</li><br>
+<b>A B C D E F G H I J K L M N O P Q R S T</b><br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>2nd search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+<b>I J K L M N O P Q R S T U V W X Y Z A B </b><br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+    </ul>
+
+  <li>Normal search: the software will make six searches</li><br>
+    <ul>
+      <li>1st search:</li><br>
+<b>A B C D E F G H I J K L M N O P Q R S T</b><br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>2nd search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+<b>U V W X Y Z A B C D E F G H I J K L M N </b><br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>3rd search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+<b>O P Q R S T U V W X Y Z A B C D E F G H </b><br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>4th search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+<b>I J K L M N O P Q R S T U V W X Y Z A B </b><br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>5th search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+<b>C D E F G H I J K L M N O P Q R S T U V </b><br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>6th search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+<b>W X Y Z A B C D E F G H I J K L M N O P </b><br><br>
+    </ul>
+
+  <li>Exhaustive search: the software will make 21 searches</li><br>
+    <ul>
+      <li>1st search:</li><br>
+<b>A B C D E F G H I J K L M N O P Q R S T</b><br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>2nd search:</li><br>
+A B C D E <b>F G H I J K L M N O P Q R S T <br>
+U V W X Y </b>Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>3rd search:</li><br>
+A B C D E F G H I J <b>K L M N O P Q R S T <br>
+U V W X Y Z A B C D </b>E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+
+........
+      <li>21th search:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+<b>W X Y Z A B C D E F G H I J K L M N O P </b><br>
+
+
+
+</ul>
+
+</body>
+</html>

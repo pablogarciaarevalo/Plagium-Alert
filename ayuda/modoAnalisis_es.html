@@ -1,0 +1,170 @@
+<html>
+<body>
+<h1>
+Modo de analisis
+</h1>
+
+<p>
+Desde el menú Configuración/Modo de análisis se permite cambiar el tipo de análisis que se realiza.
+</p>
+
+<p>
+El método de análisis permite establecer el tipo de análisis entre las siguientes opciones:
+  <ul>
+    <li><u>Búsqueda rápida</u>: Realiza una búsqueda en Google con las 20 primeras palabras, si existe, de cada párrafo.</li>
+    <li><u>Búsqueda normal</u>: Realiza búsquedas de 20 palabras con un salto de 20 palabras. </li>
+    <li><u>Búsqueda exhaustiva</u>: Realiza búsquedas de 20 palabras con un salto de 5 palabras.</li>
+  </ul>
+Lógicamente, cuantas más búsquedas sobre un párrafo se analicen más probabilidad de acierto existe. No obstante, se desaconseja utilizar la búsqueda
+exhaustiva a no ser que sea para un párrafo pequeño ya que puede producir que los servidores de Google corten el servicio a la dirección IP pública desde
+la que se trabaja al entenderlo como un ataque hacking. Es responsabilidad del usuario las consecuencias al modificar estas opciones.
+</p>
+
+<p>
+El límite de búsquedas permite asegurar la disponibilidad del sistema (evitar que los servidores de Google corten el servicio) estableciendo una sóla
+búsqueda por cada número de segundos que se tenga establecido. Lógicamente esto hará que el análisis de un documento tarde más en finalizar de lo que realmente
+podría durar pero la velocidad de los cálculos no entra en los objetivos de esta primera versión de la aplicación.
+</p>
+
+<p><u>Ejemplos</u>:</p>
+
+<p>
+A continuación se establece un ejemplo de las búsquedas que se realizan sobre los servidores de Google por cada tipo de búsqueda. Cada blque representa un párrafo y
+cada letra 5 palabras, por lo que el contenido serían 2 párrafos de 60 palabras cada uno. Se marca en <b>negrita</b> las palabras de las que se realizan búsquedas.
+</p>
+
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br>
+<ul>
+  <li>Busqueda rápida: Se realizarían 2 búsquedas</li><br>
+    <ul>
+      <li>1ª busqueda:</li><br>
+<b>A B C D E F G H I J K L M N O P Q R S T</b><br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>2ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+<b>I J K L M N O P Q R S T U V W X Y Z A B </b><br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+    </ul>
+
+  <li>Busqueda normal: Se realizarían 6 búsquedas</li><br>
+    <ul>
+      <li>1ª busqueda:</li><br>
+<b>A B C D E F G H I J K L M N O P Q R S T</b><br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>2ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+<b>U V W X Y Z A B C D E F G H I J K L M N </b><br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>3ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+<b>O P Q R S T U V W X Y Z A B C D E F G H </b><br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>4ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+<b>I J K L M N O P Q R S T U V W X Y Z A B </b><br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>5ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+<b>C D E F G H I J K L M N O P Q R S T U V </b><br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>6ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+<b>W X Y Z A B C D E F G H I J K L M N O P </b><br><br>
+    </ul>
+
+  <li>Busqueda exhaustiva: Se realizarían x búsquedas</li><br>
+    <ul>
+      <li>1ª busqueda:</li><br>
+<b>A B C D E F G H I J K L M N O P Q R S T</b><br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>2ª busqueda:</li><br>
+A B C D E <b>F G H I J K L M N O P Q R S T <br>
+U V W X Y </b>Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+      <li>3ª busqueda:</li><br>
+A B C D E F G H I J <b>K L M N O P Q R S T <br>
+U V W X Y Z A B C D </b>E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+W X Y Z A B C D E F G H I J K L M N O P <br><br>
+
+........
+      <li>21ª busqueda:</li><br>
+A B C D E F G H I J K L M N O P Q R S T <br>
+U V W X Y Z A B C D E F G H I J K L M N <br>
+O P Q R S T U V W X Y Z A B C D E F G H <br>
+<br>
+I J K L M N O P Q R S T U V W X Y Z A B <br>
+C D E F G H I J K L M N O P Q R S T U V <br>
+<b>W X Y Z A B C D E F G H I J K L M N O P </b><br>
+
+
+
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

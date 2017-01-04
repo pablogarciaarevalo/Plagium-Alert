@@ -1,0 +1,30 @@
+#########################################################################@
+# La variable "idioma" indica el tipo de idioma (es=español/en=ingleS)	#@
+idioma=es@
+#########################################################################@
+# La variable "nivel" indica el tipo de busqueda, pudiendo timoar los	#@
+# siguientes valores:							#@
+# 0 --> Busqueda rapida: Se realiza solo una busqueda con las primeras	#@
+# 	20 palabras de cada parrafo.					#@
+# 1 --> Busqueda normal: Se realizan busquedas de 20 palabras haciendo	#@
+#	un salto de 20 en 20 palabras.					#@
+# 2 --> Busqueda exhaustiva: Se realizan busquedas de 20 palabras 	#@
+#	haciendo un salto de 5 en 5 palabras.				#@
+nivel=2@
+#########################################################################@
+# La variable "hayLimite" indica si se limitaran las busquedas en el 	#@
+# tiempo, pudiendo tomar los siguientes valore:				#@
+# siguientes valores:							#@
+# 0 --> Se limitaran las busquedas en el tiempo. Se hara una busqueda 	#@
+# 	cada x segundos, donde x toma el valor de la "segundosLimite".	#@
+# 1 --> No se limitaran las busquedas en el tiempo. La variable		#@
+# 	"segundosLimite" no tiene sentido cuando "hayLimite" toma el	#@
+#	valor 1.							#@
+hayLimite=0@
+#########################################################################@
+# La variable "segundosLimite" indica el numero de segundos que pasaran	#@
+# entre una busqueda y otra, pudiendo tomar cualquier valor entero	#@
+# positivo. Esta variable solo se tomara en cuenta cuando la variable	#@
+# "hay limite" tome valor 0.						#@
+segundosLimite=5@
+#########################################################################@
